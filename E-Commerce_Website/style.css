@@ -1,0 +1,1461 @@
+@import url('https://fonts.googleapis.com/css2?family=Spartan:wght@100;200;300;400;500;600;700;800;900&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Spartan', sans-serif;
+}
+
+h1 {
+    font-size: 50px;
+    line-height: 64px;
+    color: #36454F;
+}
+
+h2 {
+    font-size: 46px;
+    line-height: 54px;
+    color: #36454F;
+}
+
+h4 {
+    font-size: 20px;
+    color: #36454F;
+}
+
+p {
+    font-size: 16px;
+    color: #36454F;
+    margin: 15px 0 20px 0;
+}
+
+.section-p1 {
+    padding: 40px 80px;
+
+}
+
+.section-m1 {
+    margin: 40px 0;
+}
+
+body {
+    width: 100%;
+}
+
+/* Adjust the logo size and position */
+.logo {
+    width: 70px; /* Example width, adjust as needed */
+    height: auto; /* Maintains aspect ratio */
+}
+
+/* Header and Hero Container */
+#header-hero-container {
+    background-size: cover;
+    background-position: top 25% right 0;
+    width: 100%;
+}
+
+/* Header Start */
+#header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 80px;
+    background: transparent; /* Make header background transparent */
+    box-shadow: none; /* Remove box shadow */
+    position: relative; /* Ensure proper stacking */
+    z-index: 999; /* Ensure it is on top of the background image */
+    top: 0;
+    left: 0;
+}
+
+#navbar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#navbar li {
+    list-style: none;
+    padding: 0 20px; 
+    position: relative;
+}
+
+#navbar li a {
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 600; 
+    color: #1a1a1a;
+    transition: 0.3s ease;
+}
+
+#navbar li a:hover,
+#navbar li a.active {
+    color: #088178;
+}
+
+#navbar li a.active::after,
+#navbar li a:hover::after {
+    content: "";
+    width: 30%;
+    height: 2px;
+    background: #088178;
+    position: absolute;
+    bottom: -4px;
+    left: 20px;
+}
+
+#mobile {
+    display: none;
+    align-items: center;
+}
+
+#close {
+    display: none;
+}
+
+/* Home Page */
+#hero {
+    background-image: url(images/shopping-08.jpg);
+    background-size: contain; /* Ensures the entire image is visible */
+    background-position: center center; /* Center the background image */
+    background-repeat: no-repeat; /* Prevent the background image from repeating */
+    height: 100vh; /* Adjust the height as needed */
+    width: 100%; /* Full width */
+    padding: 0 100px; /* Horizontal padding */
+    display: flex; /* Flexbox layout */
+    flex-direction: column; /* Column direction for child elements */
+    justify-content: flex-start; /* Align items at the start */
+    padding-top: 20px; /* Top padding */
+    color: #36454F; /* Text color for visibility */
+}
+
+#hero h4 {
+    padding-bottom: 4px;
+}
+
+#hero h1 {
+    color: #088178;
+}
+
+#hero p {
+    color: #041e42;
+}
+
+button {
+    width: auto; /* Width adjusts to content */
+    max-width: 140px; /* Adjusted max width for a smaller button */
+    color: #FFFF; /* Text color */
+    background-color: #8fbc8f; /* Transparent background to see the image */
+    padding: 5px 12px; /* Adjust padding to reduce button size */
+    border: 2px solid transparent; /* Transparent border */
+    border-radius: 5px; /* Rounded corners */
+    cursor: pointer; /* Pointer cursor on hover */
+    font-size: 15px; /* Font size */
+    font-weight: 700; /* Bold text */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Shadow for depth */
+    transition: background-color 0.3s ease, transform 0.3s ease, background-image 0.3s ease; /* Smooth transitions */
+    margin-top: -15px; /* Adjust margin to move it upward */
+    margin-bottom: 20px; /* Add margin below the button */
+    background-size: cover; /* Ensure the image covers the button */
+    background-position: center; /* Center the background image */
+    background-repeat: no-repeat;
+}
+
+button:hover {
+    transform: translateY(-3px); /* Move button up slightly on hover */
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15); /* Enhance shadow on hover */
+    /* No need to change background-image here, as it's already set */
+    background-image: url("images/light\ green.jpeg");
+}
+
+#feature {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 20px; /* Optional: Add some padding around the container */
+    gap: 9px; /* Use gap property for spacing between items */
+}
+
+#feature .fe-box {
+    display: flex;
+    flex-direction: column; /* Stack items vertically */
+    align-items: center;    /* Center items horizontally */
+    text-align: center;
+    padding: 25px 20px;
+    border: 1px solid #cce7d0;
+    border-radius: 4px;
+    box-shadow: 20px 20px 34px rgba(0, 0, 0, 0.03); /* Add shadow for depth */
+    width: 180px; /* Set a fixed width */
+    /* Remove the margin-left and margin-top if unnecessary */
+    margin: 10px; /* Adjust this margin for less space between boxes */
+}
+
+#feature .fe-box:hover {
+    box-shadow: 10px 10px 54px rgba(70, 62, 221, 0.1); /* Add shadow for depth */
+}
+
+.fe-box img {
+    width: 160px;  /* Set width for the image */
+    height: 150px;  /* Maintain aspect ratio */
+    max-width: 160px; /* Ensures responsiveness */
+    margin-bottom: 10px; /* Space between image and text */
+}
+
+#feature .fe-box h6 {
+    display: inline-block;
+    padding: 9px 8px 6px 8px;
+    line-height: 1;
+    border-radius: 4px;
+    color: #FFFF;
+    background-color: #77b5fe;
+    margin: 0; /* Remove any default margin */
+}
+
+#feature .fe-box:nth-child(2) h6 {
+    background-color: #87cefa;
+}
+
+#feature .fe-box:nth-child(3) h6 {
+    background-color: #8fbc8f;
+}
+
+#feature .fe-box:nth-child(4) h6 {
+    background-color: #ffb6c1;
+}
+
+#feature .fe-box:nth-child(5) h6 {
+    background-color: #ffcba4;
+}
+
+#feature .fe-box:nth-child(6) h6 {
+    background-color: #fbab60;
+}
+
+#product1 {
+    text-align: center;
+}
+
+#product1 .pro-container {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 20px;
+    flex-wrap: wrap;
+    margin-right: 20px;
+}
+
+#product1 {
+    display: flex;
+    flex-wrap: wrap; /* Allows items to wrap to the next line if necessary */
+    justify-content: space-between; /* Distributes space between items */
+    margin: 0 -15px; /* Adjusts margin to account for padding in .pro */
+}
+
+#product1 .pro {
+    width: 23%;
+    min-width: 150px;
+    padding: 10px 12px;
+    border: 1px solid #cce7d0;
+    border-radius: 25px;
+    cursor: pointer;
+    box-shadow: 20px 20px 30px rgba(0, 0, 0, 0.02);
+    margin: 15px 15px; /* Margin on all sides to create space between items */
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+    position: relative;
+}
+
+#product1 .pro:hover {
+    transform: translateY(-10px) scale(1.05); /* Moves the product up and scales it slightly */
+    box-shadow: 0 15px 25px rgba(0, 0, 0, 0.2); /* Creates a deeper shadow effect */
+    background-color: #87cefa; /* Lightens the background color on hover */
+}
+
+#product1 .pro img {
+    transition: transform 0.3s ease; /* Add transition to the image for smooth effect */
+    width: 100%;
+    border-radius: 15px;
+}
+
+#product1 .pro .des {
+    text-align: start;
+    padding: 10px 0;
+}
+
+#product1 .pro .des span {
+    color: #606063;
+    font-size: 12px;
+}
+
+#product1 .pro .des h5 {
+    padding-top: 7px;
+    color: #1a1a1a;
+    font-size: 14px;
+}
+
+#product1 .pro .des i {
+    font-size: 12px;
+    color: rgb(243, 181, 25);
+}
+
+#product1 .pro .des h4 {
+    padding-top: 7px;
+    font-size: 15px;
+    font-weight: 700;
+    color: #088178;
+}
+
+/* Shopping cart icon styling */
+.bag {
+    width: 40px; /* Width of the circle */
+    height: 40px; /* Height of the circle */
+    border-radius: 50%; /* Creates a perfect circle */
+    background-color: #e8f6ea; /* Background color of the circle */
+    font-weight: 500; /* Font weight for the icon */
+    color: #088178; /* Icon color */
+    border: 1px solid #cce7d0; /* Border styling */
+    display: flex; /* Flexbox model for centering */
+    align-items: center; /* Center icon vertically */
+    justify-content: center; /* Center icon horizontally */
+    font-size: 20px; /* Icon size */
+    transition: transform 0.2s ease; /* Smooth animation for hover effect */
+    position: absolute; /* Position absolute to place it within the product card */
+    bottom: 20px; /* Distance from the bottom of the product card */
+    right: 10px; /* Distance from the right of the product card */
+}
+
+/* Optional hover effect */
+.bag:hover {
+    transform: scale(1.1); /* Slightly enlarges the icon on hover */
+    background-color: #d1e8da; /* Changes background color on hover */
+}
+
+#banner {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-image: url("images/banner/model1.jpg");
+    width: 100%;
+    height: 40vh;
+    background-size: cover;
+    background-position: center;
+}
+
+#banner h4 {
+    color: #fff;
+    font-size: 16px;
+}
+
+#banner h2 {
+    color: #fff;
+    font-size: 30px;
+    padding: 10px 0;
+}
+
+#banner h2 span {
+    color: #ef3636;
+}
+
+#bannerButton {
+    margin-top: 5px;
+    background-color: #041e42;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    border: none;
+    outline: none;
+}
+
+#bannerButton:hover {
+    transform: translateY(-3px); /* Move button up slightly on hover */
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15); /* Enhance shadow on hover */
+    /* No need to change background-image here, as it's already set */
+    background-image: url("images/banner/model1.jpg");
+}
+
+#sm-banner {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+#sm-banner .banner-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start; /* Fix typo, should be 'flex-start' */
+    background-image: url("images/yellow.jpg");
+    min-width: 600px; /* Increase width */
+    height: 70vh; /* Increase height */
+    background-size: cover;
+    background-position: center;
+    padding: 50px; /* Optional: Increase padding */
+    margin-left: 30px; /* Margin to create space on the left */
+}
+
+#sm-banner .banner-box2 {
+    background-image: url("images/banner/prom-dress.jpg");
+    margin-right: 30px;
+}
+
+#sm-banner .banner-box2 button.white:hover {
+    background-image: url("images/banner/prom-dress.jpg");
+}
+
+.banner-box h5 {
+    color: #FFF;
+    font-size: 18px;
+    font-weight: 300;
+}
+
+.banner-box h3 {
+    color: #FFF;
+    font-size: 25px;
+    font-weight: 800;
+}
+
+.banner-box span {
+    color: #FFF;
+    font-size: 14px;
+    font-weight: 500;
+    padding-bottom: 15px;
+}
+
+button.white {
+    font-size: 13px;
+    font-weight: 600;
+    padding: 11px 18px; /* Padding for button size */
+    margin-top: 3.5px;
+    color: #FFF; /* Initial text color */
+    background-color: transparent; /* Initial background */
+    cursor: pointer; /* Pointer cursor on hover */
+    border: 1px solid #FFF; /* White border */
+    outline: none; /* Remove outline */
+    position: relative; /* Position relative for pseudo-element */
+    overflow: hidden; /* Hide overflow for smooth effect */
+    transition: color 0.4s ease, border-color 0.4s ease; /* Smooth transition for color and border */
+    z-index: 1; /* Ensure button text is above the overlay */
+}
+
+button.white::before {
+    content: ''; /* Empty content for pseudo-element */
+    position: absolute; /* Position absolute for overlay */
+    top: 100%; /* Start from below the button */
+    left: -100%; /* Start from the left outside the button */
+    width: 300%; /* Wide enough to cover the button diagonally */
+    height: 300%; /* High enough to cover the button diagonally */
+    background-color: #ffcba4; /* Overlay background color */
+    z-index: -1; /* Place below the text */
+    transform: rotate(45deg); /* Rotate to create diagonal slide */
+    transform-origin: center; /* Origin for the transformation */
+    transition: transform 0.4s ease; /* Smooth transition for transform */
+}
+
+button.white:hover::before {
+    top: 0; /* Move to cover the button vertically */
+    left: 0; /* Move to cover the button horizontally */
+    transform: rotate(0deg); /* Remove rotation for diagonal slide effect */
+}
+
+button.white:hover {
+    color: #606063; /* Change text color on hover */
+    border-color: #fff; /* Change border color on hover */
+    background-image: url("images/yellow.jpg");
+}
+
+#banner3 {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 0 80px;
+}
+
+#banner3 .banner-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start; /* Fix typo, should be 'flex-start' */
+    background-image: url("images/seasonal_sale.jpg");
+    min-width: 30%; /* Increase width */
+    height: 30vh; /* Increase height */
+    background-size: cover;
+    background-position: center;
+    padding: 20px; /* Optional: Increase padding */
+    margin-left: 30px; /* Margin to create space on the left */
+    margin-bottom: 20px;
+}
+
+#banner3 .banner-box2 {
+    background-image: url("images/couples.jpg");
+}
+
+#banner3 .banner-box3 {
+    background-image: url("images/HD.jpg");
+}
+
+#banner3 h2 {
+    color: #FFF;
+    font-weight: 900;
+    font-size: 22px;
+}
+
+#banner3 h3 {
+    color: #ef3636;
+    font-weight: 800;
+    font-size: 15px;
+}
+
+#newsletter {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-items: center;
+    background-image: url("images/banner/stamps.jpg");
+    background-repeat: no-repeat;
+    background-position: 20% 30%;
+    background-color: #041e42;
+}
+
+#newsletter h4 {
+    font-size: 22px;
+    font-weight: 700;
+    color: #fff;
+}    
+
+#newsletter p {
+    font-size: 14px;
+    font-weight: 600;
+    color: #818ea0;
+}  
+
+#newsletter p span{
+    color: #ffbd27;
+}  
+
+#newsletter .form {
+    display: flex;
+    width: 40%;
+}
+
+#newsletter input {
+    height: 3.125rem; /* Match the height */
+    padding: 0 1.25em; /* Add padding */
+    font-size: 14px; /* Font size */
+    flex: 1; /* Take up available space */
+    border: 1px solid #ccc; /* Border for input */
+    border-radius: 4px; /* Rounded corners */
+    border-top-right-radius: 0; /* Remove top-right border radius */
+    border-bottom-right-radius: 0; /* Remove bottom-right border radius */
+    outline: none; /* Remove outline */
+    margin: 0; /* Remove margin to prevent gaps */
+}
+
+#newsletter button {
+    background-color: #088178; /* Button background color */
+    color: #fff; /* Button text color */
+    white-space: nowrap; /* Prevent text from wrapping */
+    height: 3.125rem; /* Match the height */
+    padding: 0 1.25em; /* Add padding */
+    border: none; /* Remove default border */
+    border-top-left-radius: 0; /* Remove top-left border radius */
+    border-bottom-left-radius: 0; /* Remove bottom-left border radius */
+    cursor: pointer; /* Show pointer cursor on hover */
+    display: flex; /* Flexbox for centering text */
+    align-items: center; /* Vertically center text */
+    margin: 0; /* Remove margin to prevent gaps */
+}
+
+.row {
+    display: flex; /* Use flexbox for layout */
+    justify-content: flex-start; /* Align items at the start */
+    align-items: center; /* Center items vertically */
+    gap: 20px; /* Add space between images */
+}
+
+.appStore {
+    width: 100px; /* Set width as needed */
+    height: auto; /* Maintain aspect ratio */
+    margin: 0; /* Remove any default margin */
+}
+
+.cards {
+    width: 80px;
+    height: auto;
+    margin: 0;
+}
+
+footer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+footer .col {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-bottom: 20px;
+}
+
+footer .logo {
+    margin-bottom: 30px;
+}
+
+footer h4 {
+    font-size: 14px;
+    padding-bottom: 20px;
+}
+
+footer p {
+    font-size: 13px;
+    margin: 0 0 8px 0;
+    color: #222;
+}
+
+footer a {
+    font-size: 13px;
+    text-decoration: none;
+    color: #222;
+    margin-bottom: 10px;
+}
+
+footer .follow {
+    margin-top: 20px;
+}
+
+footer .follow i {
+    color: #465b52;
+    padding-right: 4px;
+    cursor: pointer;
+}
+
+footer .install img {
+    margin: 10px 0 15px 0;
+} 
+
+footer .follow i:hover,
+footer a:hover {
+    color: #088178;
+}
+
+footer .copyright {
+    width: 100%;
+    text-align: center;
+}
+
+@media (max-width:799px) {
+
+   .section-p1 {
+    padding: 40px 40px;
+   }
+
+    #navbar {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+        position: fixed;
+        top: 0;
+        right: -300px;
+        height: 100vh;
+        width: 300px;
+        background-color: #fdf5e6;
+        background-repeat: no-repeat;
+        box-shadow: 0 40px 60px rgba(0, 0, 0, 0.1);
+        padding: 80px 0 0 10px;
+        transition: 0.3s;
+    }
+
+    #navbar.active {
+        right: 0px;
+    }
+
+    #navbar li {
+        margin-bottom: 25px;
+    }
+
+    #mobile {
+        display: flex;
+        align-items: center;
+    }
+
+    #mobile i {
+        color: #1a1a1a;
+        font-size: 24px;
+        padding-left: 20px;
+    }
+
+    #close {
+        display: initial;
+        position: absolute;
+        top: 30px;
+        left: 30px;
+        color: #222;
+        font-size: 24px;
+    }
+
+    #lg-bag {
+        display: none;
+    }
+
+    #hero {
+        height: 90vh;
+        padding: 0 80px;
+        background-position: top 30% right 30%;
+    }
+
+    #feature {
+        justify-content: center;
+    }
+
+    #feature .fe-box {
+        margin: 15px 15px;;
+    }
+
+    #product1 .pro-container {
+        justify-content: center;
+    }
+
+    #product1 .pro {
+        margin: 15px;
+    }
+    
+    #banner {
+        height: 20vh;
+    }
+
+    #sm-banner .banner-box {
+        min-width: 100%;
+        height: 30vh;
+    }
+
+    #banner3 {
+        padding: 0 40px;
+    }
+
+    #banner3 .banner-box {
+        width: 70%;
+    }
+
+    #newsletter .form {
+        width: 70%;
+    }
+
+     /* Contact Page */
+
+     #form-details {
+        padding: 40px;
+    }
+
+    #form-details form {
+        width: 50%;
+    }
+}
+
+@media (max-width: 477px) {
+    .section-p1 {
+     padding: 20px;
+    }
+
+    #header {
+        padding: 10px 30px;
+    }
+
+    h2 {
+        font-size: 32px;
+    }
+
+    h1 {
+        font-size: 38px;
+    }
+
+    #hero {
+        padding: 0 20px;
+        background-position: 55%;
+    } 
+
+    #feature {
+        justify-content: space-between;
+    }
+
+    #feature .fe-box {
+        width: 155px;
+        margin: 0 0 15px 0;
+    }
+
+    #product1 .pro {
+        width: 100%;
+    }
+
+    #banner {
+        height: 40vh;
+    }
+
+    #sm-banner .banner-box {
+        height: 40vh;
+    }
+
+    #sm-banner .banner-box2 {
+        margin-top: 20px;
+    }
+
+    #banner3 {
+        padding: 0 20px;
+    }
+
+    #banner3 .banner-box {
+        width: 100%;
+    }
+
+    #newsletter {
+        padding: 40px 20px;
+    }
+
+    #newsletter .form {
+        width: 100%;
+    }
+
+    footer .copyright {
+        text-align: start;
+    }
+
+    /* Blog Page */
+
+    #blog {
+        padding: 100px 20px 0 20px;
+    }
+
+    #blog .blog-box {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    #blog .blog-img {
+        width: 100%;
+        margin-right: 0px;
+        margin-bottom: 30px;
+    }
+
+    #blog .blog-details {
+        width: 100%;
+    }
+
+    /* About Page */
+
+    #about-head {
+        flex-direction: column;
+    }
+
+    #about-head img {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    #about-head div {
+        padding-left: 0px;
+    }
+
+    #about-illustration video {
+        width: 100%;
+    }
+
+    /* Contact Page */
+    #contact-details {
+        flex-direction: column;
+    }
+
+    #contact-details .details {
+        width: 100%;
+        margin-bottom: 30px;
+    }
+
+    #contact-details .map {
+        width: 100%;
+    }
+
+    #form-details {
+        margin: 10px;
+        padding: 30px 10px;
+        flex-wrap: wrap;
+    }
+
+    #form-details form {
+        width: 100%;
+        margin-bottom: 30px;
+    }
+
+/* Cart Page */
+
+    #cart-add {
+        flex-direction: column;
+    }
+
+    #coupon {
+        width: 100%;
+    }
+
+    #subtotal {
+        width: 100%;
+        padding: 20px;
+    }
+
+}
+
+/* Shop Page */
+#page-header {
+    background-image: url("images/banner/red.jpg");
+    width: 100%;
+    height: 40vh;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+    padding: 14px;
+}
+
+#page-header h2,p{
+    color: #fff;
+}
+
+#pagination {
+    text-align: center;
+}
+
+#pagination a {
+    text-decoration: none;
+    background-color: #088178;
+    padding: 15px 20px;
+    border-radius: 4px;
+    color: #fff;
+    font-weight: 600;
+}
+
+#pagination  a i {
+    font-size: 16px;
+    font-weight: 600;
+}
+
+/* Single Product */
+
+#prodetails {
+    display: flex;
+    margin-top: 20px;
+}
+
+#prodetails .single-pro-image {
+    width: 40%;
+    margin-right: 50px;
+}
+
+.small-img-group {
+    display: flex;
+    justify-content: space-between; /* Distributes space between images */
+    align-items: center; /* Aligns images vertically in the center */
+    gap: 15px; /* Adds space between images */
+}
+
+.small-img-group img {
+    width: 120px; /* Set desired width */
+    height: 120px; /* Set desired height */
+    object-fit: cover; /* Ensures images cover the area without distortion */
+    object-position: center center; /* Center the image within its container */
+    border-radius: 8px; /* Optional: adds rounded corners */
+}
+
+.small-img-col {
+    flex-basis: 24%;
+    cursor: pointer;
+}
+
+#prodetails .single-pro-details {
+    width: 50%;
+    padding-top: 30px;
+}
+
+#prodetails .single-pro-details h4 {
+    padding: 40px 0 20px 0;
+}
+
+#prodetails .single-pro-details h2 {
+    font-size: 26px;
+}
+
+#prodetails .single-pro-details section {
+    display: block;
+    padding: 5px 10px;
+    margin-bottom: 10px;
+}
+
+#prodetails  .single-pro-details input {
+    width: 50px;
+    height: 47px;
+    padding-left: 10px;
+    font-size: 16px;
+    margin-right: 10px;
+    margin-top: 10px;
+}
+
+#prodetails .single-pro-details input:focus {
+    outline: none;
+}
+
+#prodetails .single-pro-details button {
+    background: #77b5fe;
+    color: #fff;
+    border-radius: 2px;
+}
+
+#prodetails .single-pro-details span {
+    line-height: 25px;
+}
+
+#prodetails .single-pro-details button:hover {
+    transform: none;
+}
+
+/* Single Product */
+@media (max-width:799px) {
+#prodetails {
+    display: flex;
+    flex-direction: column;
+}
+
+#prodetails .single-pro-image {
+    width: 100%;
+    margin-right: 0px;
+}
+
+#prodetails .single-pro-details {
+    width: 100%;
+ }
+}
+
+/* Blog Page */
+.blog-header {
+    background-image: url("images/shop.jpg");
+    width: 100%;
+    height: 40vh;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+    padding: 14px;
+}
+
+.blog-header h2,p {
+    color: #fff;
+}
+
+#blog {
+    padding: 150px 150px 0 150px;
+}
+
+#blog .blog-box {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    position: relative;
+    padding-bottom: 90px;
+}
+
+.blog-details p {
+    color: #222;
+}
+
+#blog .blog-img {
+    width: 50%;
+    margin-right: 40px;
+}
+
+#blog img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+}
+
+#blog .blog-details {
+    width: 50%;
+}
+
+#blog .blog-details a {
+    text-decoration: none;
+    font-size: 11px;
+    color: #000;
+    font-weight: 700;
+    position: relative;
+    transition: 0.3s;
+}
+
+#blog .blog-details a::after {
+    content: "";
+    width: 50px;
+    height: 1px;
+    background-color: #000;
+    position: absolute;
+    top: 4px;
+    right: -60px;
+}
+
+#blog .blog-details a:hover {
+    color: #088178;
+}
+
+#blog .blog-details a:hover::after {
+    background-color: #088178;
+}
+
+#blog .blog-box h1 {
+    position: absolute;
+    top: -40px;
+    left: 0;
+    font-size: 70px;
+    font-weight: 700;
+    color: #c9cbce;
+    z-index: -9;
+}
+
+/* About Page */
+
+#about-header {
+    background-image: url("images/banner/banners.jpg");
+    width: 100%;
+    height: 40vh;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+    padding: 14px;
+}
+
+#about-header h2 {
+    color: #fff;
+}
+
+#about-head p {
+    color: #041e42;
+    width: 80%;
+}
+
+#about-head {
+    display: flex;
+    align-items: center;
+}
+
+#about-head img {
+    width: 200%;
+    height: auto;
+}
+
+#about-head div {
+    padding-left: 40px;
+}
+
+#about-illustration {
+    text-align: center;
+}
+
+#about-illustration .video {
+    width: 70%;
+    height: 100%;
+    margin: 30px auto 0 auto;
+}
+
+#about-illustration .video video {
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
+}
+
+.for-p p{
+    color: #000;
+}
+
+/* Contact Page */
+
+#contact-details {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#contact-details .details {
+    width: 40%;
+}
+
+#contact-details .details span,
+#form-details form span {
+    font-size: 12px;
+}
+
+#contact-details .details h2,
+#form-details form h2 {
+    font-size: 26px;
+    line-height: 35px;
+    padding: 20px 0;
+}
+
+#contact-details .details h3 {
+    font-size: 16px;
+    padding-bottom: 15px;
+}
+
+#contact-details .details li {
+    list-style: none;
+    display: flex;
+    padding: 10px 0;
+}
+
+#contact-details .details li i {
+    font-size: 14px;
+    padding-right: 22px;
+}
+
+#contact-details .details li p {
+    margin: 0;
+    font-size: 14px;
+}
+
+#contact-details .map {
+    width: 55%;
+    height: 400px;
+}
+
+#contact-details .map iframe {
+    width: 100%;
+    height: 100%;
+}
+
+#form-details {
+    display: flex;
+    justify-content: space-between;
+    margin: 30px;
+    padding: 80px;
+    border: 1px solid #e1e1e1;
+}
+
+#form-details form {
+    width: 65%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+#form-details form input,
+#form-details form textarea {
+    width: 100%;
+    padding: 12px 15px;
+    outline: none;
+    margin-bottom: 20px;
+    border: 1px solid #e1e1e1;
+}
+
+#form-details form button {
+    background-color: #8fbc8f;
+    color: #fff;
+    border-radius: 1px;
+}
+
+#form-details form button:hover {
+    transform: none;
+    transition: none;
+}
+
+#form-details .people div {
+    padding-bottom: 25px;
+    display: flex;
+    align-items: flex-start;
+}
+
+.people-p p {
+    color: #36454F;
+}
+
+#form-details .people div img {
+    width: 65px;
+    height: 65px;
+    object-fit: cover;
+    margin-right: 15px;
+}
+
+#form-details .people div p {
+    margin: 0;
+    font-size: 13px;
+    line-height: 25px;
+}
+
+#form-details .people div p span {
+   display: block;
+   font-size: 16px;
+   font-weight: 600;
+   color: #000;
+}
+
+.about-header {
+    background-image: url("images/globe.jpg");
+    width: 100%;
+    height: 40vh;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+    padding: 14px;
+}
+
+/* Cart Page */ 
+
+.about-heading {
+    background-image: url("images/blac.jpg");
+    width: 100%;
+    height: 40vh;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+    padding: 14px;
+}
+
+.about-heading h2 {
+    color: #fff;
+}
+
+#cart {
+    overflow-x: auto;
+}
+
+#cart table {
+    width: 100%;
+    border-collapse: collapse;
+    table-layout: fixed;
+    white-space: nowrap;
+}
+
+#cart table img {
+    width: 70px;
+}
+
+#cart table td:nth-child(1) {
+    width: 100px;
+    text-align: center;
+}
+
+#cart table td:nth-child(2) {
+    width: 150px;
+    text-align: center;
+}
+
+#cart table td:nth-child(3) {
+    width: 250px;
+    text-align: center;
+}
+
+#cart table td:nth-child(4),
+#cart table td:nth-child(5),
+#cart table td:nth-child(6) {
+    width: 150px; 
+    text-align: center;
+}
+
+#cart table td:nth-child(5) input {
+    width: 70px;
+    padding: 10px 5px 10px 15px;
+}
+
+#cart table thead {
+    border: 1px solid #e2e9e1;
+    border-left: none;
+    border-right: none;
+}
+
+#cart table thead td {
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 13px;
+    padding: 18px 0;
+}
+
+#cart table tbody tr td {
+    padding-top: 15px;
+}
+
+#cart table tbody td {
+    font-size: 13px;
+}
+
+#cart-add {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+#coupon {
+    width: 50%;
+    margin-bottom: 30px;
+}
+
+#coupon h3,
+#subtotal h3 {
+    padding-bottom: 15px;
+}
+
+#coupon input {
+    padding: 10px 20px;
+    outline: none;
+    width: 60%;
+    margin-right: 10px;
+    border: 1px solid #e1e1e1;
+}
+
+#coupon button,
+#subtotal button {
+ background-color: #ffb6c1;
+ color: #fff;
+border-radius: 1px;
+padding: 9px 17px;
+}
+
+#coupon .coupon-btn:hover {
+    transform: none;
+    transition: none;
+    background-image: url("images/banner/bg.jpg");
+}
+
+#subtotal button:hover {
+    transform: none;
+    transition: none;
+    background-image: url("images/banner/bg.jpg");
+}
+
+#subtotal {
+    width: 50%;
+    margin-bottom: 30px;
+    border: 1px solid #e2e9e1;
+    padding: 30px;
+}
+
+#subtotal table {
+    border-collapse: collapse;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+#subtotal table td {
+    width: 50%;
+    border: 1px solid #e2e9e1;
+    padding: 10px;
+    font-size: 13px;
+}
+
+.section-divider {
+    border: none; /* Remove default border */
+    border-top: 2px solid #000; /* Change color and thickness */
+    margin: 20px 0; /* Add space above and below the line */
+}
